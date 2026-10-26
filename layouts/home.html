@@ -1,0 +1,36 @@
+{{ define "main" }}
+<div class="shell">
+  <section class="hero" aria-labelledby="hero-title">
+    <p class="eyebrow"><span class="signal" aria-hidden="true"></span>{{ .Params.eyebrow }}</p>
+    <div class="hero-heading">
+      <h1 id="hero-title">{{ .Params.headline }}<br><span>{{ .Params.headlineAccent }}</span></h1>
+      <div class="hero-intro">
+        <p>{{ .Params.intro }}</p>
+        <div class="hero-actions">
+          <a class="button" href="{{ "projects/" | relURL }}">Explore projects <span aria-hidden="true">↗</span></a>
+          <a class="text-link" href="{{ "newsletter/" | relURL }}">Read the newsletter <span aria-hidden="true">→</span></a>
+        </div>
+      </div>
+    </div>
+    <figure class="hero-image">
+      <img src="{{ site.Params.banner | relURL }}" width="2730" height="1133" alt="{{ .Params.bannerAlt }}" fetchpriority="high" decoding="async">
+      <figcaption><span>Human curiosity. Intelligent machines.</span><span>Build · Learn · Share</span></figcaption>
+    </figure>
+  </section>
+  <section class="about-strip" aria-label="About Moissan Club">
+    <p class="eyebrow">A shared starting point</p>
+    <div class="about-copy prose">{{ .Content }}</div>
+  </section>
+  <section class="latest-section" aria-labelledby="latest-title">
+    <div class="section-heading">
+      <div><p class="eyebrow">From the club</p><h2 id="latest-title">The latest.</h2></div>
+      <a class="text-link" href="{{ "newsletter/" | relURL }}">All communications <span aria-hidden="true">→</span></a>
+    </div>
+    {{ range first 3 (where site.RegularPages "Section" "newsletter").ByDate.Reverse }}
+      {{ partial "newsletter-row.html" (dict "page" . "headingLevel" 3) }}
+    {{ else }}
+      <p class="empty-state">Our next communication will appear here.</p>
+    {{ end }}
+  </section>
+</div>
+{{ end }}

@@ -1,0 +1,18 @@
+{{ define "main" }}
+<article class="shell page-shell{{ if eq .Section "newsletter" }} article-shell{{ end }}">
+  {{ if eq .Section "newsletter" }}
+    <header class="article-header">
+      <a class="eyebrow back-link" href="{{ "newsletter/" | relURL }}">← Newsletter</a>
+      <div class="article-meta"><time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "January 2, 2006" }}</time><span aria-hidden="true">·</span><span>{{ .ReadingTime }} min read</span>{{ if .Params.example }}<span class="badge">Example issue</span>{{ end }}</div>
+      <h1>{{ .Title }}</h1>
+      {{ with .Description }}<p class="standfirst">{{ . }}</p>{{ end }}
+      <p class="byline">By {{ .Params.author | default site.Title }}</p>
+    </header>
+    <div class="prose article-content">{{ .Content }}</div>
+    <div class="article-end"><span class="brand-mark" aria-hidden="true">✳</span><a class="text-link" href="{{ "newsletter/" | relURL }}">Back to all communications →</a></div>
+  {{ else }}
+    <header class="page-header"><p class="eyebrow">{{ .Params.eyebrow | default site.Title }}</p><h1>{{ .Title }}<span class="accent">.</span></h1>{{ with .Description }}<p class="standfirst">{{ . }}</p>{{ end }}</header>
+    <div class="page-body"><aside class="page-aside"><p>Explore. Experiment.<br>Build something useful.</p><a class="text-link" href="{{ site.Params.github }}">Our GitHub ↗</a></aside><div class="prose project-content">{{ .Content }}</div></div>
+  {{ end }}
+</article>
+{{ end }}

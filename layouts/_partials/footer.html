@@ -1,0 +1,12 @@
+<footer class="site-footer shell">
+  <div>
+    <a class="footer-brand" href="{{ site.Home.RelPermalink }}">Moissan Club</a>
+    <p>Carbon Sparks Silicon.</p>
+  </div>
+  <nav aria-label="Footer links">
+    <a href="{{ site.Params.github }}">GitHub ↗</a>
+    <a href="mailto:{{ site.Params.email }}">Get in touch ↗</a>
+    {{ with site.GetPage "/newsletter" }}{{ with .OutputFormats.Get "RSS" }}<a href="{{ .RelPermalink }}">RSS ↗</a>{{ end }}{{ end }}
+  </nav>
+  <small>© {{ now.Year }} Moissan Club</small>
+</footer>

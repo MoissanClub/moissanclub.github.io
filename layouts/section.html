@@ -1,0 +1,17 @@
+{{ define "main" }}
+<section class="shell page-shell" aria-labelledby="section-title">
+  <header class="page-header"><p class="eyebrow">{{ .Params.eyebrow | default site.Title }}</p><h1 id="section-title">{{ .Title }}<span class="accent">.</span></h1>{{ with .Description }}<p class="standfirst">{{ . }}</p>{{ end }}</header>
+  <div class="archive-intro prose">{{ .Content }}</div>
+  <div class="archive-list">
+    {{ $paginator := .Paginate .RegularPages.ByDate.Reverse }}
+    {{ range $paginator.Pages }}{{ partial "newsletter-row.html" (dict "page" . "headingLevel" 2) }}{{ else }}<p class="empty-state">Our next communication will appear here.</p>{{ end }}
+  </div>
+  {{ if gt $paginator.TotalPages 1 }}
+  <nav class="pagination" aria-label="Newsletter pagination">
+    {{ if $paginator.HasPrev }}<a href="{{ $paginator.Prev.URL }}">← Newer issues</a>{{ else }}<span></span>{{ end }}
+    <span>Page {{ $paginator.PageNumber }} of {{ $paginator.TotalPages }}</span>
+    {{ if $paginator.HasNext }}<a href="{{ $paginator.Next.URL }}">Older issues →</a>{{ else }}<span></span>{{ end }}
+  </nav>
+  {{ end }}
+</section>
+{{ end }}

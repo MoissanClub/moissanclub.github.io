@@ -1,0 +1,47 @@
+baseURL = 'https://moissan.org/'
+locale = 'en-US'
+title = 'Moissan Club'
+timeZone = 'America/Los_Angeles'
+enableRobotsTXT = true
+disableKinds = ['taxonomy', 'term']
+
+[params]
+  description = 'A Silicon Valley community of robotics builders, connecting hardware, software, and real-world deployment.'
+  email = 'info@moissan.org'
+  github = 'https://github.com/MoissanClub'
+  banner = '/images/moissan-banner.jpeg'
+
+[permalinks.page]
+  newsletter = '/newsletter/:slug/'
+
+[outputs]
+  home = ['HTML']
+  page = ['HTML']
+  section = ['HTML', 'RSS']
+
+[pagination]
+  pagerSize = 12
+
+[services.rss]
+  limit = 20
+
+[[menus.main]]
+  identifier = 'home'
+  name = 'Home'
+  pageRef = '/'
+  weight = 10
+
+[[menus.main]]
+  identifier = 'projects'
+  name = 'Projects'
+  pageRef = '/projects'
+  weight = 20
+
+[[menus.main]]
+  identifier = 'newsletter'
+  name = 'Newsletter'
+  pageRef = '/newsletter'
+  weight = 30
+
+[markup.goldmark.renderer]
+  unsafe = false

@@ -1,0 +1,11 @@
+{{ $headingLevel := .headingLevel }}
+{{ with .page }}
+<article class="newsletter-row">
+  <div class="row-date"><time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "Jan 02, 2006" }}</time>{{ if .Params.example }}<span class="badge">Example issue</span>{{ end }}</div>
+  <div class="row-copy">
+    {{ if eq $headingLevel 2 }}<h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>{{ else }}<h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>{{ end }}
+    <p>{{ .Description | default (.Summary | plainify | truncate 180) }}</p>
+  </div>
+  <a class="row-arrow" href="{{ .RelPermalink }}" aria-label="Read {{ .Title }}"><span aria-hidden="true">↗</span></a>
+</article>
+{{ end }}
