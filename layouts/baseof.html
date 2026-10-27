@@ -23,7 +23,12 @@
   {{ end }}{{ end }}
   {{ $css := resources.Get "css/main.css" | minify | fingerprint "sha256" }}
   <link rel="stylesheet" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.Integrity }}">
-  <link rel="icon" href="{{ "favicon.svg" | relURL }}" type="image/svg+xml">
+  <link rel="icon" href="{{ "favicon.ico" | relURL }}" type="image/x-icon" sizes="16x16 32x32 48x48">
+  <link rel="icon" href="{{ "favicon-16x16.png" | relURL }}" type="image/png" sizes="16x16">
+  <link rel="icon" href="{{ "favicon-32x32.png" | relURL }}" type="image/png" sizes="32x32">
+  <link rel="apple-touch-icon" href="{{ "apple-touch-icon-152x152.png" | relURL }}" sizes="152x152">
+  <link rel="apple-touch-icon" href="{{ "apple-touch-icon-167x167.png" | relURL }}" sizes="167x167">
+  <link rel="apple-touch-icon" href="{{ "apple-touch-icon.png" | relURL }}" sizes="180x180">
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
