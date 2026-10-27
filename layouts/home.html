@@ -9,8 +9,8 @@
   </div>
 </section>
 <div class="shell">
-  <section class="about-strip" aria-label="About Moissan Club">
-    <p class="eyebrow">{{ .Params.aboutLabel | default "About Us" }}</p>
+  <section class="about-strip" aria-labelledby="about-title">
+    <h2 class="about-title" id="about-title">{{ .Params.aboutLabel | default "About Us" }}</h2>
     <div class="about-copy">
       <div class="prose"><p>{{ .Params.intro }}</p>{{ .Content }}</div>
       <div class="hero-actions about-actions">
