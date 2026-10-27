@@ -1,9 +1,8 @@
 ---
 title: "Moissan Club"
 description: "Carbon Sparks Silicon. A Silicon Valley community turning ideas into working robotics prototypes."
-eyebrow: "Silicon Valley · Robotics community"
-headline: "Carbon Sparks"
-headlineAccent: "Silicon."
+heroTitle: "Moissan Club"
+tagline: "Carbon Sparks Silicon"
 intro: "Founded by passionate builders at the heart of Silicon Valley, Moissan Club is a non-profit organization dedicated to empowering the community to master end-to-end robotics and accelerate their journey from initial idea to working prototype."
 aboutLabel: "About Us"
 bannerAlt: "A robotic hand and a digital wireframe hand reaching toward a spark in space."

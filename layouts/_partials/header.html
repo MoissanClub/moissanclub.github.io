@@ -1,4 +1,4 @@
-<header class="site-header shell">
+<header class="site-header shell{{ if .IsHome }} site-header--overlay{{ end }}">
   <a class="brand" href="{{ site.Home.RelPermalink }}" aria-label="Moissan Club home">
     <span class="brand-mark" aria-hidden="true">✳</span>
     <span>MOISSAN <span class="brand-light">CLUB</span></span>
