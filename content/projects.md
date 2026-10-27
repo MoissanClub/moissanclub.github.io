@@ -8,6 +8,7 @@ Our work connects robot hardware, software, and the tools that make experimentat
 
 {{< project-grid >}}
 {{< project >}}
+
 ## G1 Development Helpers
 
 Setup and runtime helpers for the Unitree G1 PC2, bringing practical development tasks into one place.
@@ -16,6 +17,7 @@ Setup and runtime helpers for the Unitree G1 PC2, bringing practical development
 {{< /project >}}
 
 {{< project >}}
+
 ## RealSense WebRTC
 
 Hardware-accelerated RealSense RGB video streaming from a Jetson Orin NX to a browser.
@@ -24,12 +26,23 @@ Hardware-accelerated RealSense RGB video streaming from a Jetson Orin NX to a br
 {{< /project >}}
 
 {{< project >}}
+
 ## G1 Documentation
 
 An offline copy of the official Unitree G1 developer documentation, organized for use with AI agents. The original documentation belongs to Unitree.
 
-[Explore G1 Documentation →](https://github.com/MoissanClub/g1-docs)
+[Explore G1 Documentation →](https://github.com/MoissanClub/xr_teleoperate)
 {{< /project >}}
+
+{{< project >}}
+
+## Unitree Teleoperate
+
+Improved Quest VR Teleoperate experiences with Unitree G1 robots, featuring smooth operations with Meta Quest VR controllers.
+
+[XR Teleoperate →](https://github.com/MoissanClub/g1-docs)
+{{< /project >}}
+
 {{< /project-grid >}}
 
 ---
