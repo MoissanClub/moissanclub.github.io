@@ -15,7 +15,9 @@ And it turns out, you don’t need full dexterity to do amazing things. Meet SO-
 True magic happens when hardware and software come together. We’ve contributed PRs upstream to Hugging Face LeRobot, forked and improved several open-source projects, added audio to the teleop stack, and built unitree_g1_lerobot to bring the 23-DoF G1 into LeRobot—another reminder that “cross-embodiment” is easier said than done. We’re also experimenting with general-purpose VLMs operating robots through a common harness. More on GitHub: https://github.com/MoissanClub/
 
 One more thing
+
 Thanks to Frank, Moissan Club has a new router—and our Wi-Fi is now 10× faster. We think you’re going to love it.
 
 See you soon,
+
 Moissan Club
