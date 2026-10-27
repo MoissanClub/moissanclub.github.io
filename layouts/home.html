@@ -18,7 +18,7 @@
     </figure>
   </section>
   <section class="about-strip" aria-label="About Moissan Club">
-    <p class="eyebrow">A shared starting point</p>
+    <p class="eyebrow">{{ .Params.aboutLabel | default "About Us" }}</p>
     <div class="about-copy prose">{{ .Content }}</div>
   </section>
   <section class="latest-section" aria-labelledby="latest-title">
