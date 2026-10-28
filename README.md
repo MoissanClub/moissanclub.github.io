@@ -128,6 +128,8 @@ python3 scripts/check_site.py
 
 `public/` and generated caches are ignored and should not be committed. Site templates live in `layouts/`; the stylesheet is `assets/css/main.css`. The site has no client-side JavaScript or external font dependencies.
 
+The link checker validates relative links and assets against this site's generated files. Use full URLs, such as `https://moissan.org/gemma-hackathon/`, for separately hosted repo Pages sites. Full URLs are not checked for local files or availability, even when they share `moissan.org`; no per-repo configuration is needed. Required pages, canonical URLs, and newsletter RSS are checked separately.
+
 ## References
 
 - [Hugo page bundles](https://gohugo.io/content-management/page-bundles/)

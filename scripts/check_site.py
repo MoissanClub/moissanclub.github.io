@@ -34,7 +34,6 @@ def target_exists(directory, url):
 def check_site(directory, base_url):
     directory = directory.resolve()
     errors = []
-    host = urlsplit(base_url).netloc
     for relative in ("index.html", "projects/index.html", "newsletter/index.html", "newsletter/index.xml", "404.html", "sitemap.xml", "robots.txt"):
         if not (directory / relative).is_file():
             errors.append(f"Missing generated file: {relative}")
@@ -55,9 +54,11 @@ def check_site(directory, base_url):
         if not page.has_heading and not is_alias:
             errors.append(f"{relative}: missing h1")
         for link in page.links:
-            target = urlsplit(urljoin(base_url.rstrip("/") + route, link))
-            if target.scheme not in ("http", "https") or target.netloc != host:
+            # Full URLs may belong to separate deployments on the same domain.
+            source = urlsplit(link)
+            if source.scheme or source.netloc:
                 continue
+            target = urlsplit(urljoin(base_url.rstrip("/") + route, link))
             if not target_exists(directory, target.geturl()):
                 errors.append(f"{relative}: broken local link {link}")
 
@@ -74,7 +75,7 @@ def check_site(directory, base_url):
 
     if errors:
         raise SystemExit("Site checks failed:\n- " + "\n- ".join(errors))
-    print(f"Site checks passed: {len(pages)} HTML pages, internal assets and links, canonical domain, and newsletter RSS.")
+    print(f"Site checks passed: {len(pages)} HTML pages, relative assets and links, canonical domain, and newsletter RSS.")
 
 
 if __name__ == "__main__":
