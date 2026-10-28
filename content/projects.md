@@ -43,8 +43,6 @@ Improved Quest VR Teleoperate experiences with Unitree G1 robots, featuring smoo
 [XR Teleoperate →](https://github.com/MoissanClub/xr_teleoperate)
 {{< /project >}}
 
-{{< /project-grid >}}
-
 {{< project >}}
 
 ## Cross-Embodiment Gemma Harness
