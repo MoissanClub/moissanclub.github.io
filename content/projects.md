@@ -31,7 +31,7 @@ Hardware-accelerated RealSense RGB video streaming from a Jetson Orin NX to a br
 
 An offline copy of the official Unitree G1 developer documentation, organized for use with AI agents. The original documentation belongs to Unitree.
 
-[Explore G1 Documentation →](https://github.com/MoissanClub/xr_teleoperate)
+[Explore G1 Documentation →](https://github.com/MoissanClub/g1-docs)
 {{< /project >}}
 
 {{< project >}}
@@ -40,7 +40,19 @@ An offline copy of the official Unitree G1 developer documentation, organized fo
 
 Improved Quest VR Teleoperate experiences with Unitree G1 robots, featuring smooth operations with Meta Quest VR controllers.
 
-[XR Teleoperate →](https://github.com/MoissanClub/g1-docs)
+[XR Teleoperate →](https://github.com/MoissanClub/xr_teleoperate)
+{{< /project >}}
+
+{{< /project-grid >}}
+
+{{< project >}}
+
+## Cross-Embodiment Gemma Harness
+
+On-device Google Gemma4 model handles perception and decision, to control different embodiments. Won award at Google Gemma hackathon.
+[Slides →](https://moissan.org/gemma-hackathon)
+
+[Code Repo →](https://github.com/MoissanClub/gemma-hackathon)
 {{< /project >}}
 
 {{< /project-grid >}}
