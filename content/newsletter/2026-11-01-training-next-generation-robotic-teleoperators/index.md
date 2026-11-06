@@ -123,7 +123,7 @@ Even after three iterations, the wiring remained messy. Between cameras, USB con
 
 ### What did we collect, and what’s next?
 
-We collected recordings with both two-camera and single-camera setups, after wrist-camera failures forced us to change the configuration.
+We collected more than 100 trajectories across two-camera and single-camera setups, after wrist-camera failures forced us to change the configuration.
 
 Our hypothesis is that these demonstrations are less consistent than those of experienced operators. We want to test whether they can still support a useful candy-picking policy, and whether filtering or processing the recordings improves performance.
 
